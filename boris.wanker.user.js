@@ -12,9 +12,6 @@
 
 (function() {
     'use strict';
-    console.log(document.body.innerHTML);
-
-
 document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson,/g, 'Boris Johnson, wanking furiously,');
 document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously.');
 document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
