@@ -8,6 +8,9 @@
 // @include     https://*/*
 // @grant        none
 // @run-at      document-end
+// @exclude     https://github.com/*
+// @exclude     https://www.youtube.com/*
+// @exclude     https://tweetdeck.twitter.com/*
 // ==/UserScript==
 
 (function() {
