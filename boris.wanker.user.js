@@ -15,8 +15,14 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson,/g, 'Boris Johnson, wanking furiously,');
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously.');
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
-})();
+	var textnodes = document.evaluate("//body//text()[not(ancestor::script) and not(ancestor::style)]", document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,null),
+		node, text;
+	for(var i = 0; i < textnodes.snapshotLength; i++) {
+		node = textnodes.snapshotItem(i);
+		text = node.data;
+		text = text.replace(/Boris Johnson,/g, 'Boris Johnson, wanking furiously,');
+		text = text.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously,');
+		text = text.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
+		node.data = text;
+	}
+}).call(this);
