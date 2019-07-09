@@ -11,7 +11,8 @@
 // @exclude     https://github.com/*
 // @exclude     https://www.youtube.com/*
 // @exclude     https://tweetdeck.twitter.com/*
-// @exclude     https://www.facebook.com//*
+// @exclude     https://www.facebook.com/*
+// @exclude     https://open.spotify.com/*
 // ==/UserScript==
 
 (function() {
