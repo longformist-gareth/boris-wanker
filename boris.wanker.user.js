@@ -21,7 +21,7 @@
 		node = textnodes.snapshotItem(i);
 		text = node.data;
 		text = text.replace(/Boris Johnson,/g, 'Boris Johnson, wanking furiously,');
-		text = text.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously,');
+		text = text.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously.');
 		text = text.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
 		node.data = text;
 	}
