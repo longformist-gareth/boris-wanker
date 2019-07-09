@@ -7,6 +7,7 @@
 // @match        https://*/*
 // @include     https://*/*
 // @grant        none
+// @run-at      document-end
 // ==/UserScript==
 
 (function() {
@@ -14,7 +15,7 @@
     console.log(document.body.innerHTML);
 
 
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson, wanking furiously, /g, 'Boris Johnson, wanking furiously,  wanking furiously, ');
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously,  wanking furiously. ');
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson, wanking furiously, /g, 'Boris Johnson, wanking furiously,  wanking furiously, ');
+document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson, /g, 'Boris Johnson, wanking furiously,');
+document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously.');
+document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
 })();
