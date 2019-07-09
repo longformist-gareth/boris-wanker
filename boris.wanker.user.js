@@ -15,8 +15,19 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson,/g, 'Boris Johnson, wanking furiously,');
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously.');
-document.body.innerHTML = document.body.innerHTML.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
+  'use strict';
+  var wanks = [
+    "wanking furiously",
+    "cock in hand",
+    "pulling himself off",
+    "tugging at his plonker",
+    "spaffing up the wall"
+  ]
+  document.body.innerHTML = document.body.innerHTML.replace(
+    /([Boris|Mr|Mr.] Johnson)([,\. ])/g, 
+    function(match, name, ending){
+      ending = ending == " "? ",": ending;
+      return name + ", " + wanks[Math.floor(Math.random() * wanks.length)] + ending + " ";
+    }
+  );
 })();
