@@ -21,9 +21,9 @@
 	for(var i = 0; i < textnodes.snapshotLength; i++) {
 		node = textnodes.snapshotItem(i);
 		text = node.data;
-		text = text.replace(/Boris Johnson([_.,!:])/g, 'Boris Johnson, wanking furiously$1');
+		text = text.replace(/Boris Johnson([_.,!?:])/g, 'Boris Johnson, wanking furiously$1');
 		text = text.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
-        	text = text.replace(/@BorisJohnson([_.,!:])/g, '@BorisJohnson, wanking furiously$1');
+        	text = text.replace(/@BorisJohnson([_.,!?:])/g, '@BorisJohnson, wanking furiously$1');
         	text = text.replace(/@BorisJohnson /g, '@BorisJohnson, wanking furiously, ');
 		node.data = text;
 	}
