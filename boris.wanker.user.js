@@ -24,6 +24,9 @@
 		text = text.replace(/Boris Johnson,/g, 'Boris Johnson, wanking furiously,');
 		text = text.replace(/Boris Johnson\./g, 'Boris Johnson, wanking furiously.');
 		text = text.replace(/Boris Johnson /g, 'Boris Johnson, wanking furiously, ');
+		text = text.replace(/Rees-Mogg,/g, 'Rees-Mogg, lounging arrogantly,');
+		text = text.replace(/Rees-Mogg\./g, 'Rees-Mogg, lounging arrogantly.');
+		text = text.replace(/Rees-Mogg /g, 'Rees-Mogg, lounging arrogantly, ');
 		node.data = text;
 	}
 }).call(this);
